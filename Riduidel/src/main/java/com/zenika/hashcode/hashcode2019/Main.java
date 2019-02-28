@@ -69,7 +69,7 @@ public class Main {
 		String[] lines = input.split(("\n"));
 		Input inputStructure = new Input();
 		for (int i = 1; i < lines.length; i++) {
-			inputStructure.addPictureFrom(lines[i]);
+			inputStructure.addPictureFrom(lines[i], i-1);
 		}
 		Slideshow output = computeOutput(inputStructure);
 		System.out.println("Best score calculated : " + output.score());
