@@ -1,0 +1,13 @@
+package com.zenika.hashcode.hashcode2019;
+
+import com.zenika.hashcode.hashcode2019.input.Picture;
+
+public class VerticalSlide implements Slide {
+	private final Picture first;
+	private final Picture second;
+	public VerticalSlide(Picture first, Picture second) {
+		super();
+		this.first = first;
+		this.second = second;
+	}
+}
