@@ -11,7 +11,7 @@ import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
 
-import com.zenika.hashcode.hashcode2019.computer.nmahoude.Computer;
+import com.zenika.hashcode.hashcode2019.computer.riduidel.Computer;
 import com.zenika.hashcode.hashcode2019.input.Input;
 import com.zenika.hashcode.hashcode2019.output.Slideshow;
 

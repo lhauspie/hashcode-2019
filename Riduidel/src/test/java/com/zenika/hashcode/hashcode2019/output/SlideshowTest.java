@@ -13,7 +13,7 @@ public class SlideshowTest  {
 	@Test
 	public void test_score_for_0_1_2_3() {
 		Slideshow s = new Slideshow();
-		s.slides.addAll(
+		s.getSlides().addAll(
 				Arrays.asList(
 /* 0 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("cat", "beach", "sun"))),
 				new VerticalSlide(
@@ -27,7 +27,7 @@ public class SlideshowTest  {
 	@Test
 	public void test_score_for_0_3_1_2() {
 		Slideshow s = new Slideshow();
-		s.slides.addAll(
+		s.getSlides().addAll(
 				Arrays.asList(
 /* 0 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("cat", "beach", "sun"))),
 /* 3 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("garden", "cat"))),
