@@ -46,11 +46,11 @@ public class Input {
 		return (tags/3)*(vertical/2+horizontal);
 	}
 	
-	Collection<Picture> getHorizontal() {
+	public Collection<Picture> getHorizontal() {
 	  return pictures.stream().filter(p -> p.orientation == Orientation.H).collect(Collectors.toList());
 	}
 
-	Collection<Picture> getVertical() {
+	public Collection<Picture> getVertical() {
     return pictures.stream().filter(p -> p.orientation == Orientation.V).collect(Collectors.toList());
   }
 }
