@@ -72,6 +72,8 @@ public class Main {
 			inputStructure.addPictureFrom(lines[i]);
 		}
 		Slideshow output = computeOutput(inputStructure);
+		System.out.println("Best score calculated : " + output.score());
+		System.out.println("File output : "+out2.getCanonicalPath());
 		FileUtils.write(out2, output.toFile());
 	}
 
