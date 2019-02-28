@@ -2,12 +2,13 @@ package com.zenika.hashcode.hashcode2019.input;
 
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.List;
 import java.util.stream.Collectors;
 
 public class Input {
 	private long horizontal = 0;
 	private long vertical = 0;
-	public Collection<Picture> pictures = new LinkedList<Picture>();
+	public List<Picture> pictures = new LinkedList<Picture>();
 	public void addPictureFrom(String string) {
 		String[] data = string.split(" ");
 		Picture newPicture = new Picture();
