@@ -10,4 +10,7 @@ public class VerticalSlide implements Slide {
 		this.first = first;
 		this.second = second;
 	}
+	public String toFile() {
+		return first.index+ " "+second.index;
+	}
 }

@@ -70,7 +70,12 @@ public class Main {
 		for (int i = 1; i < lines.length; i++) {
 			inputStructure.addPictureFrom(lines[i]);
 		}
-		System.out.println(inputStructure);
+		Slideshow output = computeOutput(inputStructure);
+		FileUtils.write(out2, output.toFile());
+	}
+
+	private Slideshow computeOutput(Input inputStructure) {
+		throw new UnsupportedOperationException("Allez les mecs");
 	}
 
 }

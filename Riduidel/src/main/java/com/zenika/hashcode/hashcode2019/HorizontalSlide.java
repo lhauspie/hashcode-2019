@@ -9,4 +9,8 @@ public class HorizontalSlide implements Slide {
 		super();
 		this.picture = picture;
 	}
+
+	public String toFile() {
+		return picture.index+"";
+	}
 }
