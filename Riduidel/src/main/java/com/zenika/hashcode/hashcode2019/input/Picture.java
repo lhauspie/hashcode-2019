@@ -1,5 +1,6 @@
 package com.zenika.hashcode.hashcode2019.input;
 
+import java.util.Collection;
 import java.util.Set;
 import java.util.TreeSet;
 
@@ -20,5 +21,11 @@ public class Picture {
 		builder.append(tags);
 		builder.append("]");
 		return builder.toString();
+	}
+
+
+	public Picture tagged(Collection<String> asList) {
+		tags.addAll(asList);
+		return this;
 	}
 }
