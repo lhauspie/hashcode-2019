@@ -17,6 +17,7 @@ public class Computer extends com.zenika.hashcode.hashcode2019.computer.Computer
   private Slideshow bestSS = null;
   
   public Slideshow compute(Input inputStructure) {
+<<<<<<< Updated upstream
     Slideshow bestSS = new Slideshow();
     bestSS.slides.add(new HorizontalSlide(inputStructure.pictures.get(0)));
     bestSS.slides.add(new HorizontalSlide(inputStructure.pictures.get(3)));
@@ -37,6 +38,18 @@ public class Computer extends com.zenika.hashcode.hashcode2019.computer.Computer
         if (!choice && horizontal.isEmpty()) choice = true;
         
         if (choice) {
+=======
+
+    long start = System.currentTimeMillis();
+    while (System.currentTimeMillis() - start < 5*60*10) {
+      Collection<Picture> vertical = inputStructure.getVertical();
+      Collection<Picture> horizontal = inputStructure.getVertical();
+
+      Slideshow ss = new Slideshow();
+      while (horizontal.isEmpty() || !vertical.isEmpty()) {
+        Slide slide;
+        if (!vertical.isEmpty() || rand.nextBoolean()) {
+>>>>>>> Stashed changes
           Picture first  = vertical.toArray(PICTURE)[rand.nextInt(vertical.size()-1)];
           vertical.remove(first);
           Picture second;
