@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 public abstract class AbstractSlide implements Slide {
 
-	Map<String, Long> scores = new HashMap<>();
+	static Map<String, Long> scores = new HashMap<>();
 
 	public long score(Slide other) {
 		String slideId1 = this.getId();

@@ -43,11 +43,11 @@ public class SlideshowTest  {
 		Slideshow s = new Slideshow();
 		s.getSlides().addAll(
 				Arrays.asList(
-						/* 0 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("cat", "beach", "sun"))),
-						/* 3 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("garden", "cat"))),
+/* 0 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("cat", "beach", "sun"))),
+/* 3 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("garden", "cat"))),
 						new VerticalSlide(
-								/* 1 */						new Picture().tagged(Arrays.asList("selfie", "smile")),
-								/* 2 */						new Picture().tagged(Arrays.asList("garden", "selfie")))
+/* 1 */						new Picture().tagged(Arrays.asList("selfie", "smile")),
+/* 2 */						new Picture().tagged(Arrays.asList("garden", "selfie")))
 				));
 
 		long start = System.currentTimeMillis();
