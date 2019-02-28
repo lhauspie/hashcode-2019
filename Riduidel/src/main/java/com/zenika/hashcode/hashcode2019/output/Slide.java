@@ -8,4 +8,5 @@ public interface Slide {
 	String toFile();
 	Set<String> tags();
 	long score(Slide other);
+	String getId();
 }

@@ -12,6 +12,7 @@ public class SlideTest {
 
 	@Test
 	public void test_disjuncted() {
+
 		Slide first = new HorizontalSlide(new Picture().tagged(Arrays.asList("cat")));
 		Slide second = new HorizontalSlide(new Picture().tagged(Arrays.asList("selfie", "smile")));
 		Assert.assertThat(first.score(second), Is.is(0l));

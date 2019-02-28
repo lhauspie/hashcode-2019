@@ -18,7 +18,7 @@ public class Slideshow {
 	}
 
 	public long score() {
-		if(score<0) {
+		if (score<0) {
 			score = computeScore();
 		}
 		return score;

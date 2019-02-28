@@ -10,11 +10,19 @@ public class VerticalSlide extends AbstractSlide implements Slide {
 	private final Picture first;
 	private final Picture second;
 	private Set<String> tags = null;
+	private String id;
+
 	public VerticalSlide(Picture first, Picture second) {
 		super();
 		this.first = first;
 		this.second = second;
+		if (first.index < second.index) {
+			id = String.valueOf(first.index).concat(".").concat(String.valueOf(second.index));
+		} else {
+			id = String.valueOf(second.index).concat(".").concat(String.valueOf(first.index));
+		}
 	}
+
 	public String toFile() {
 		return first.index+ " "+second.index;
 	}
@@ -31,5 +39,10 @@ public class VerticalSlide extends AbstractSlide implements Slide {
 	@Override
 	public String toString() {
 		return String.format("VerticalSlide [first=%s, second=%s]", first, second);
+	}
+
+	@Override
+	public String getId() {
+		return id;
 	}
 }
