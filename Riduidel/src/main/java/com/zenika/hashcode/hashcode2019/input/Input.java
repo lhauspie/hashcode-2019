@@ -9,14 +9,14 @@ public class Input {
 	private long horizontal = 0;
 	private long vertical = 0;
 	public List<Picture> pictures = new LinkedList<Picture>();
-	public void addPictureFrom(String string) {
+	public void addPictureFrom(String string, int j) {
 		String[] data = string.split(" ");
 		Picture newPicture = new Picture();
+		newPicture.index = j;
 		newPicture.orientation = Orientation.valueOf(data[0]);
 		newPicture.tagsCount =  Integer.parseInt(data[1]);
 		for (int i = 2; i < data.length; i++) {
 			newPicture.tags.add(data[i]);
-			newPicture.index = i-2;
 		}
 		addPicture(newPicture);
 	}
