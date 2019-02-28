@@ -12,7 +12,9 @@ import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
 
+import com.zenika.hashcode.hashcode2019.computer.Computer;
 import com.zenika.hashcode.hashcode2019.input.Input;
+import com.zenika.hashcode.hashcode2019.output.Slideshow;
 
 public class Main {
 	@Option(name = "-i", usage = "input to this file", metaVar = "INPUT")
@@ -75,7 +77,7 @@ public class Main {
 	}
 
 	private Slideshow computeOutput(Input inputStructure) {
-		throw new UnsupportedOperationException("Allez les mecs");
+		return new Computer().compute(inputStructure);
 	}
 
 }

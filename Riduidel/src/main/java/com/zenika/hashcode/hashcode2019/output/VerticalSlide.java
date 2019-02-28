@@ -1,4 +1,4 @@
-package com.zenika.hashcode.hashcode2019;
+package com.zenika.hashcode.hashcode2019.output;
 
 import com.zenika.hashcode.hashcode2019.input.Picture;
 
