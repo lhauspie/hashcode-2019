@@ -31,7 +31,7 @@ public class Slideshow {
 		while(iter.hasNext()) {
 			Slide s = iter.next();
 			if(previous!=null) {
-				score = previous.score(s);
+				score += previous.score(s);
 			}
 			previous = s;
 		}
