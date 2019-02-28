@@ -4,13 +4,14 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 public class Input {
-	private Collection<Picture> pictures = new LinkedList<Picture>();
+	public Collection<Picture> pictures = new LinkedList<Picture>();
 	public void addPictureFrom(String string) {
 		String[] data = string.split(" ");
 		Picture newPicture = new Picture();
 		newPicture.orientation = Orientation.valueOf(data[0]);
 		for (int i = 2; i < data.length; i++) {
 			newPicture.tags.add(data[i]);
+			newPicture.index = i-2;
 		}
 		pictures.add(newPicture);
 	}

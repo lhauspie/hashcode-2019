@@ -4,10 +4,21 @@ import java.util.Set;
 import java.util.TreeSet;
 
 public class Picture {
+	public long index;
 	public Orientation orientation;
 	public Set<String> tags = new TreeSet<String>();
+
+
 	@Override
 	public String toString() {
-		return "Picture [orientation=" + orientation + ", tags=" + tags + "]";
+		StringBuilder builder = new StringBuilder();
+		builder.append("Picture [index=");
+		builder.append(index);
+		builder.append(", orientation=");
+		builder.append(orientation);
+		builder.append(", tags=");
+		builder.append(tags);
+		builder.append("]");
+		return builder.toString();
 	}
 }
