@@ -41,7 +41,7 @@ public class SlideshowTest  {
 	@Test
 	public void perf() {
 		Slideshow s = new Slideshow();
-		s.slides.addAll(
+		s.getSlides().addAll(
 				Arrays.asList(
 						/* 0 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("cat", "beach", "sun"))),
 						/* 3 */				new HorizontalSlide(new Picture().tagged(Arrays.asList("garden", "cat"))),

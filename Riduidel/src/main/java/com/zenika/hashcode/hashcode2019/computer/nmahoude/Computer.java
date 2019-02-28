@@ -18,9 +18,9 @@ public class Computer extends com.zenika.hashcode.hashcode2019.computer.Computer
   
   public Slideshow compute(Input inputStructure) {
     Slideshow bestSS = new Slideshow();
-    bestSS.slides.add(new HorizontalSlide(inputStructure.pictures.get(0)));
-    bestSS.slides.add(new HorizontalSlide(inputStructure.pictures.get(3)));
-    bestSS.slides.add(new VerticalSlide(inputStructure.pictures.get(1), inputStructure.pictures.get(2)));
+    bestSS.getSlides().add(new HorizontalSlide(inputStructure.pictures.get(0)));
+    bestSS.getSlides().add(new HorizontalSlide(inputStructure.pictures.get(3)));
+    bestSS.getSlides().add(new VerticalSlide(inputStructure.pictures.get(1), inputStructure.pictures.get(2)));
     
     System.out.println("BEST SCORE EVER " + bestSS.score());
     
@@ -58,7 +58,7 @@ public class Computer extends com.zenika.hashcode.hashcode2019.computer.Computer
           horizontal.remove(first);
           slide = new HorizontalSlide(first);
         }
-        ss.slides.add(slide);
+        ss.getSlides().add(slide);
       }
       long score = ss.score();
       System.out.println("Score : "+score);
