@@ -1,7 +1,5 @@
 package com.zenika.hashcode.hashcode2019.output;
 
-import static org.junit.Assert.*;
-
 import java.util.Arrays;
 
 import org.hamcrest.core.Is;

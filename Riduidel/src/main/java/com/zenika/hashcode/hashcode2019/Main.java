@@ -72,6 +72,7 @@ public class Main {
 			inputStructure.addPictureFrom(lines[i], i-1);
 		}
 		Slideshow output = computeOutput(inputStructure);
+		System.out.println("Best theorical score : "+inputStructure.theoricalMaxScore());
 		System.out.println("Best score calculated : " + output.score());
 		System.out.println("File output : "+out2.getCanonicalPath());
 		FileUtils.write(out2, output.toFile());

@@ -16,7 +16,7 @@ public class Input {
 		newPicture.orientation = Orientation.valueOf(data[0]);
 		newPicture.tagsCount =  Integer.parseInt(data[1]);
 		for (int i = 2; i < data.length; i++) {
-			newPicture.tags.add(data[i]);
+			newPicture.tags.add(data[i].trim());
 		}
 		addPicture(newPicture);
 	}
@@ -38,7 +38,7 @@ public class Input {
 		return builder.toString();
 	}
 
-	public double possibleMaxScore() {
+	public double theoricalMaxScore() {
 		long tags = 0;
 		for (Picture picture : pictures) {
 			tags+= picture.tagsCount;
