@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.zenika.hashcode.hashcode2019.input.Picture;
 
-public class HorizontalSlide implements Slide {
+public class HorizontalSlide extends AbstractSlide implements Slide {
 	private final Picture picture;
 	
 	private Set<String> tags;

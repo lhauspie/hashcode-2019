@@ -6,7 +6,7 @@ import java.util.TreeSet;
 
 import com.zenika.hashcode.hashcode2019.input.Picture;
 
-public class VerticalSlide implements Slide {
+public class VerticalSlide extends AbstractSlide implements Slide {
 	private final Picture first;
 	private final Picture second;
 	private Set<String> tags = null;
