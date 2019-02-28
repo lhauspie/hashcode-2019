@@ -4,14 +4,24 @@ import java.util.Collection;
 import java.util.LinkedList;
 
 public class Input {
+	private long horizontal = 0;
+	private long vertical = 0;
 	public Collection<Picture> pictures = new LinkedList<Picture>();
 	public void addPictureFrom(String string) {
 		String[] data = string.split(" ");
 		Picture newPicture = new Picture();
 		newPicture.orientation = Orientation.valueOf(data[0]);
+		newPicture.tagsCount =  Integer.parseInt(data[1]);
 		for (int i = 2; i < data.length; i++) {
 			newPicture.tags.add(data[i]);
 			newPicture.index = i-2;
+		}
+		addPicture(newPicture);
+	}
+	private void addPicture(Picture newPicture) {
+		switch(newPicture.orientation) {
+		case H: horizontal++; break;
+		case V: vertical++; break;
 		}
 		pictures.add(newPicture);
 	}
@@ -25,5 +35,13 @@ public class Input {
 		builder.append("]");
 		return builder.toString();
 	}
-	
+
+	public double possibleMaxScore() {
+		long tags = 0;
+		for (Picture picture : pictures) {
+			tags+= picture.tagsCount;
+		}
+		
+		return (tags/3)*(vertical/2+horizontal);
+	}
 }

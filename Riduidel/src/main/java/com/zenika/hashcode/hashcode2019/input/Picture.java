@@ -6,6 +6,7 @@ import java.util.TreeSet;
 
 public class Picture {
 	public long index;
+	public int tagsCount;
 	public Orientation orientation;
 	public Set<String> tags = new TreeSet<String>();
 
