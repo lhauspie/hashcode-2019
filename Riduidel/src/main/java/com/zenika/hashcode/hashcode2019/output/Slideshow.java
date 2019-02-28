@@ -5,24 +5,8 @@ import java.util.Collection;
 import java.util.Iterator;
 
 public class Slideshow {
-	public Collection<Slide> slides = new ArrayList<Slide>();
 	private long score = -1;
-
-	public String toFile() {
-		StringBuilder sOut = new StringBuilder();
-		sOut.append(slides.size()).append("\n");
-		for(Slide s : slides) {
-			sOut.append(s.toFile()).append("\n");
-		}
-		return sOut.toString();
-	}
-
-	public long score() {
-		if(score<0) {
-			score = computeScore();
-		}
-		return score;
-	}
+	private Collection<Slide> slides = new ArrayList<Slide>();
 
 	private long computeScore() {
 		long score = 0;
@@ -36,5 +20,37 @@ public class Slideshow {
 			previous = s;
 		}
 		return score;
+	}
+
+	public Collection<Slide> getSlides() {
+		return slides;
+	}
+
+	public long score() {
+		if(score<0) {
+			score = computeScore();
+		}
+		return score;
+	}
+
+	public void setSlides(Collection<Slide> slides) {
+		this.slides = slides;
+	}
+
+	public String toFile() {
+		StringBuilder sOut = new StringBuilder();
+		sOut.append(slides.size()).append("\n");
+		for(Slide s : slides) {
+			sOut.append(s.toFile()).append("\n");
+		}
+		return sOut.toString();
+	}
+
+	public void addAll(Collection<Slide> slides) {
+		slides.addAll(slides);
+	}
+
+	public void add(Slide slide) {
+		slides.add(slide);
 	}
 }
