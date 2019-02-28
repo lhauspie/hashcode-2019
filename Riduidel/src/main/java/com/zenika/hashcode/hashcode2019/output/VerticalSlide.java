@@ -28,4 +28,8 @@ public class VerticalSlide extends AbstractSlide implements Slide {
 		return tags;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("VerticalSlide [first=%s, second=%s]", first, second);
+	}
 }

@@ -8,6 +8,11 @@ import com.zenika.hashcode.hashcode2019.input.Picture;
 public class HorizontalSlide extends AbstractSlide implements Slide {
 	private final Picture picture;
 	
+	@Override
+	public String toString() {
+		return String.format("HorizontalSlide [picture=%s]", picture);
+	}
+
 	private Set<String> tags;
 
 	public HorizontalSlide(Picture picture) {
