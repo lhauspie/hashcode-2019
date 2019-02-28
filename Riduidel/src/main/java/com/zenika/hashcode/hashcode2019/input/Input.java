@@ -2,6 +2,7 @@ package com.zenika.hashcode.hashcode2019.input;
 
 import java.util.Collection;
 import java.util.LinkedList;
+import java.util.stream.Collectors;
 
 public class Input {
 	private long horizontal = 0;
@@ -44,4 +45,12 @@ public class Input {
 		
 		return (tags/3)*(vertical/2+horizontal);
 	}
+	
+	Collection<Picture> getHorizontal() {
+	  return pictures.stream().filter(p -> p.orientation == Orientation.H).collect(Collectors.toList());
+	}
+
+	Collection<Picture> getVertical() {
+    return pictures.stream().filter(p -> p.orientation == Orientation.V).collect(Collectors.toList());
+  }
 }

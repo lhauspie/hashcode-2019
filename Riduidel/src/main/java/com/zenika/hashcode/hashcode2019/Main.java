@@ -3,7 +3,6 @@ package com.zenika.hashcode.hashcode2019;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -12,7 +11,7 @@ import org.kohsuke.args4j.CmdLineException;
 import org.kohsuke.args4j.CmdLineParser;
 import org.kohsuke.args4j.Option;
 
-import com.zenika.hashcode.hashcode2019.computer.Computer;
+import com.zenika.hashcode.hashcode2019.computer.nmahoude.Computer;
 import com.zenika.hashcode.hashcode2019.input.Input;
 import com.zenika.hashcode.hashcode2019.output.Slideshow;
 
